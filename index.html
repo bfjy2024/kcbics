@@ -163,7 +163,30 @@
 <body>
     <div class="week-nav" id="weekNav"></div>
     <div id="timetables"></div>
-
+    <button class="export-btn" onclick="generateICalendar()">📅 导出到日历</button>
+    
+    <style>
+    .export-btn {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        padding: 12px 24px;
+        background: #007AFF;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        font-size: 16px;
+        cursor: pointer;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+        transition: all 0.2s;
+        z-index: 1000;
+    }
+    
+    .export-btn:hover {
+        background: #0063CC;
+        transform: translateY(-2px);
+    }
+    </style>
 <script>
 // 基础数据
 const startDate = new Date(2025, 1, 24); // 2025-02-24
